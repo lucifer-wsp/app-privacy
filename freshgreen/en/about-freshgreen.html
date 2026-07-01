@@ -37,34 +37,73 @@
     <li>All progress is saved locally. No network is required to play (purchases and restore need a brief connection).</li>
   </ul>
 
-  <h2>2. Growth Stages</h2>
+  <h2>2. Virtual Time &amp; Random Rhythms (worth reading)</h2>
+  <p>FreshGreen uses <strong>virtual time</strong>. These systems are <strong>not synchronized</strong>—it is easy to assume “a new game day means new weather and new pest rolls,” but that is not how it works.</p>
+  <div class="card">
+    <p><strong>Game day</strong> (status card “Day / Month / Year X”): 1 game day = 24 virtual hours. Used for:</p>
+    <ul>
+      <li>Healthy stage progression (seed ~12 virtual hours to sprout; other stages ~7 game days each);</li>
+      <li>Dehydration (about 4 game days without watering);</li>
+      <li>Outdoor pest rolls (spring/summer/autumn, at most once per <strong>game day</strong>);</li>
+      <li>Rain/snow hazard exposure buildup (7-game-day window);</li>
+      <li>Check-in uses the device <strong>calendar day</strong>, not game days.</li>
+    </ul>
+    <p><strong>Weather rotation</strong>: every <strong>6 virtual hours</strong>, weather is randomly picked from the current season’s pool (sunny/cloudy/rain/snow). This is <strong>not tied to game days</strong>—you can see several weathers within one game day; at high time scales, switches happen more often in real time.</p>
+  </div>
+  <h3>Time scale</h3>
+  <p>The status card shows the current scale (e.g. 5040×, 1951×). Higher scale = faster virtual time. Formula:</p>
+  <ul>
+    <li>1 game day (86,400 virtual seconds) ≈ <strong>86,400 ÷ scale</strong> real seconds;</li>
+    <li>Example: at 1951×, 1 game day ≈ 44 s, 6 virtual hours (one weather roll) ≈ 11 s;</li>
+    <li>At 5040×, 1 game day ≈ 17 s, 6 virtual hours ≈ 4 s.</li>
+  </ul>
+  <p>Virtual time advances while the app is in the foreground; reopening after closing applies offline elapsed time in one batch.</p>
+  <h3>Status card elapsed time</h3>
+  <p>The first meta line (“Day / Month / Year X · Flow …”) shows <strong>cumulative virtual time since the current count anchor</strong>. Display only—it does not affect growth, dehydration, pests, or hazards.</p>
+  <ul>
+    <li><strong>≤999 game days</strong>: shown as game days (e.g. “Day 128”);</li>
+    <li><strong>1000–299,999 game days</strong>: shown as game months, 30 game days = 1 month, rounded down;</li>
+    <li><strong>≥300,000 game days</strong>: shown as game years, 360 game days = 1 year, rounded down.</li>
+  </ul>
+  <p>When you <strong>change time flow</strong>, virtual time does not roll back, and the “elapsed …” line <strong>keeps accumulating—it does not reset</strong>; only the internal time anchor refreshes so the new flow rate applies going forward.</p>
+  <h3>Rain, snow &amp; indoor/outdoor (common confusion)</h3>
+  <ul>
+    <li>The status card shows the <strong>true virtual weather</strong>, regardless of indoor/outdoor; you may see “snowy” while indoors.</li>
+    <li><strong>Indoors</strong>: blocks rain/snow hazard exposure buildup; rain/snow particles still render (below the plant), but <strong>no rain sound</strong>; no “move indoors” prompt.</li>
+    <li><strong>Outdoors</strong>: full weather effects and ambient audio; move indoors during rain or snow.</li>
+    <li>If <strong>dehydrated indoors</strong> while it is raining/snowing outside, tap <strong>Move Outdoors</strong> to hydrate from precipitation; on the <strong>same game day</strong>, this recovery does not immediately count as rain/snow hazard exposure (grace day).</li>
+    <li><strong>Winter</strong> stops new pests; pests from autumn are cleared automatically.</li>
+    <li>After rain or snow is rolled, intensity is also rolled (light/heavy rain or light/heavy snow)—particle density and size only; season weather probabilities unchanged.</li>
+  </ul>
+
+  <h2>3. Growth Stages</h2>
   <p>Healthy stages follow the seasons:</p>
   <ol>
     <li><strong>Seed</strong> → <strong>Spring Sprout</strong> → <strong>Summer Peak</strong> → <strong>Autumn Shed</strong> → <strong>Winter Dormant</strong>, then a new spring cycle.</li>
   </ol>
   <p>If neglected, negative states may occur:</p>
   <ul>
-    <li><strong>Dehydrated</strong>: about 2 virtual days without watering (faster outdoors in sunny weather).</li>
+    <li><strong>Dehydrated</strong>: about 4 virtual days without watering.</li>
     <li><strong>Wilt Level 1</strong>: dehydration or pests untreated for about 7 days.</li>
     <li><strong>Wilt Level 2</strong>: Level 1 wilt untreated; a ~7-day countdown to permanent loss begins.</li>
     <li><strong>Deceased</strong>: countdown ends without Hibernation Privilege; progress is lost permanently.</li>
     <li><strong>Hibernation</strong>: with Hibernation Privilege, the plant enters hibernation instead; use Repair Fluid to wake it.</li>
   </ul>
 
-  <h2>3. Weather &amp; Indoor / Outdoor</h2>
+  <h2>4. Weather &amp; Indoor / Outdoor</h2>
   <div class="card">
-    <p><strong>Indoors</strong>: blocks rain/snow hazard exposure buildup; no “move indoors” prompt.</p>
-    <p><strong>Outdoors</strong>: shows virtual weather effects; move indoors during rain or snow.</p>
+    <p><strong>Indoors</strong>: status card still shows true weather; blocks rain/snow hazard exposure buildup; rain/snow particles visible, rain sound off; no “move indoors” prompt.</p>
+    <p><strong>Outdoors</strong>: full weather effects and ambient audio; move indoors during rain or snow.</p>
   </div>
   <ul>
-    <li><strong>Sunny</strong>: photosynthesis bonus outdoors; faster dehydration outdoors; no hazard damage.</li>
+    <li><strong>Sunny</strong>: no rain/snow hazard damage.</li>
     <li><strong>Cloudy</strong>: neutral; no extra effects.</li>
     <li><strong>Rainy</strong>: auto hydration; long outdoor exposure counts toward the 7-day hazard window; pests more likely.</li>
     <li><strong>Snowy</strong>: growth pauses; outdoor exposure counts toward the hazard window.</li>
   </ul>
   <p>Tap <strong>Move Indoors</strong> or <strong>Move Outdoors</strong> anytime; the scene and status update immediately.</p>
 
-  <h2>4. Core Care Actions</h2>
+  <h2>5. Core Care Actions</h2>
   <h3>Water</h3>
   <p>Restores moisture and helps with dehydration and Wilt Level 1. Watering outdoors in rain gives half benefit.</p>
   <h3>Remove Pests (two ways)</h3>
@@ -75,7 +114,7 @@
   <h3>Recover Plant</h3>
   <p>When wilted or hibernating, tap <strong>Recover Plant</strong> on the home screen. With Repair Fluid, restore to the healthy stage of the current season.</p>
 
-  <h2>5. Items</h2>
+  <h2>6. Items</h2>
   <ul>
     <li><strong>Nutrient Fluid</strong>: lasts 7 virtual days; keeps the plant healthy with no dehydration, pests, or wilt; stacks if multiple are used.</li>
     <li><strong>Repair Fluid</strong>: clears wilt, hibernation, and other debuffs; restores full health for the current season; <strong>cannot</strong> revive a fully deceased plant.</li>
@@ -83,10 +122,10 @@
   </ul>
   <p>Open <strong>Inventory</strong> from the home screen to view counts and confirm use.</p>
 
-  <h2>6. Daily Check-in</h2>
+  <h2>7. Daily Check-in</h2>
   <p>Tap <strong>Check-in</strong> on the home screen. Based on the device’s <strong>calendar day</strong> (not virtual game time), once per day. Random reward: Nutrient Fluid, Pesticide, or Repair Fluid, added to inventory. Missing a day does not reset your history.</p>
 
-  <h2>7. Hibernation Privilege (optional purchase)</h2>
+  <h2>8. Hibernation Privilege (optional purchase)</h2>
   <div class="card">
     <p>One-time non-consumable purchase. Prevents <strong>permanent plant loss</strong>. After Wilt Level 2 countdown, the plant hibernates instead of dying; Repair Fluid is still required to wake it.</p>
     <p>Buy or restore under <strong>Settings</strong>. Cannot recover a plant already deceased; privilege protects future progress only.</p>
