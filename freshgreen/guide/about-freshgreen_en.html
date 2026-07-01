@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About FreshGreen · Care Guide</title>
+  <style>
+    :root { color-scheme: light dark; --text: #1c1c1e; --muted: #636366; --accent: #2d6a4f; --bg: #ffffff; --card: #f2f2f7; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #f2f2f7; --muted: #aeaeb2; --accent: #95d5b2; --bg: #000000; --card: #1c1c1e; }
+    }
+    body { margin: 0; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); }
+    h1 { font-size: 22px; margin: 0 0 8px; line-height: 1.3; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+    h2 { font-size: 17px; margin: 28px 0 10px; color: var(--accent); }
+    h3 { font-size: 15px; margin: 18px 0 8px; }
+    p, li { margin: 0 0 10px; }
+    ul, ol { padding-left: 20px; margin: 0 0 12px; }
+    .card { background: var(--card); border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+    strong { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>About FreshGreen · Care Guide</h1>
+  <p class="meta">FreshGreen · Version 1.0 · Fully offline</p>
+
+  <p>
+    FreshGreen is a lightweight plant-care game. Tend your little plant through changing seasons and weather:
+    sow seeds, water, remove pests, and shelter from rain and snow as it grows from sprout to flourish.
+    This guide covers core rules and how to use the app.
+  </p>
+
+  <h2>1. Getting Started</h2>
+  <ul>
+    <li>On first launch or after your plant dies, tap <strong>Plant Seed</strong> or <strong>Replant</strong> on the home screen.</li>
+    <li>The game uses <strong>virtual time</strong> for seasons and weather; the top bar shows the current game day and days together.</li>
+    <li>All progress is saved locally. No network is required to play (purchases and restore need a brief connection).</li>
+  </ul>
+
+  <h2>2. Growth Stages</h2>
+  <p>Healthy stages follow the seasons:</p>
+  <ol>
+    <li><strong>Seed</strong> → <strong>Spring Sprout</strong> → <strong>Summer Peak</strong> → <strong>Autumn Shed</strong> → <strong>Winter Dormant</strong>, then a new spring cycle.</li>
+  </ol>
+  <p>If neglected, negative states may occur:</p>
+  <ul>
+    <li><strong>Dehydrated</strong>: about 2 virtual days without watering (faster outdoors in sunny weather).</li>
+    <li><strong>Wilt Level 1</strong>: dehydration or pests untreated for about 7 days.</li>
+    <li><strong>Wilt Level 2</strong>: Level 1 wilt untreated; a ~7-day countdown to permanent loss begins.</li>
+    <li><strong>Deceased</strong>: countdown ends without Hibernation Privilege; progress is lost permanently.</li>
+    <li><strong>Hibernation</strong>: with Hibernation Privilege, the plant enters hibernation instead; use Repair Fluid to wake it.</li>
+  </ul>
+
+  <h2>3. Weather &amp; Indoor / Outdoor</h2>
+  <div class="card">
+    <p><strong>Indoors</strong>: blocks rain/snow hazard exposure buildup; no “move indoors” prompt.</p>
+    <p><strong>Outdoors</strong>: shows virtual weather effects; move indoors during rain or snow.</p>
+  </div>
+  <ul>
+    <li><strong>Sunny</strong>: photosynthesis bonus outdoors; faster dehydration outdoors; no hazard damage.</li>
+    <li><strong>Cloudy</strong>: neutral; no extra effects.</li>
+    <li><strong>Rainy</strong>: auto hydration; long outdoor exposure counts toward the 7-day hazard window; pests more likely.</li>
+    <li><strong>Snowy</strong>: growth pauses; outdoor exposure counts toward the hazard window.</li>
+  </ul>
+  <p>Tap <strong>Move Indoors</strong> or <strong>Move Outdoors</strong> anytime; the scene and status update immediately.</p>
+
+  <h2>4. Core Care Actions</h2>
+  <h3>Water</h3>
+  <p>Restores moisture and helps with dehydration and Wilt Level 1. Watering outdoors in rain gives half benefit.</p>
+  <h3>Remove Pests (two ways)</h3>
+  <ul>
+    <li><strong>Pesticide</strong>: use from inventory or home shortcut to clear pests instantly.</li>
+    <li><strong>Free pest mini-game</strong>: a target (1–99) and four digits (1–9) are given. Pick operators (+ − × ÷) and digits in order, using each digit once, to reach the target; pests are cleared on success.</li>
+  </ul>
+  <h3>Recover Plant</h3>
+  <p>When wilted or hibernating, tap <strong>Recover Plant</strong> on the home screen. With Repair Fluid, restore to the healthy stage of the current season.</p>
+
+  <h2>5. Items</h2>
+  <ul>
+    <li><strong>Nutrient Fluid</strong>: lasts 7 virtual days; keeps the plant healthy with no dehydration, pests, or wilt; stacks if multiple are used.</li>
+    <li><strong>Repair Fluid</strong>: clears wilt, hibernation, and other debuffs; restores full health for the current season; <strong>cannot</strong> revive a fully deceased plant.</li>
+    <li><strong>Pesticide</strong>: instantly clears all pests and related debuffs.</li>
+  </ul>
+  <p>Open <strong>Inventory</strong> from the home screen to view counts and confirm use.</p>
+
+  <h2>6. Daily Check-in</h2>
+  <p>Tap <strong>Check-in</strong> on the home screen. Based on the device’s <strong>calendar day</strong> (not virtual game time), once per day. Random reward: Nutrient Fluid, Pesticide, or Repair Fluid, added to inventory. Missing a day does not reset your history.</p>
+
+  <h2>7. Hibernation Privilege (optional purchase)</h2>
+  <div class="card">
+    <p>One-time non-consumable purchase. Prevents <strong>permanent plant loss</strong>. After Wilt Level 2 countdown, the plant hibernates instead of dying; Repair Fluid is still required to wake it.</p>
+    <p>Buy or restore under <strong>Settings</strong>. Cannot recover a plant already deceased; privilege protects future progress only.</p>
+  </div>
+  <p><strong>No pay-to-win required!</strong> Regular watering, pest control, and check-ins are enough for long-term care.</p>
+
+  <p class="meta">May your plant thrive through every season.</p>
+</body>
+</html>

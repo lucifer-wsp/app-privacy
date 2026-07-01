@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于新绿 · 养成指南</title>
+  <style>
+    :root { color-scheme: light dark; --text: #1c1c1e; --muted: #636366; --accent: #2d6a4f; --bg: #ffffff; --card: #f2f2f7; }
+    @media (prefers-color-scheme: dark) {
+      :root { --text: #f2f2f7; --muted: #aeaeb2; --accent: #95d5b2; --bg: #000000; --card: #1c1c1e; }
+    }
+    body { margin: 0; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); }
+    h1 { font-size: 22px; margin: 0 0 8px; line-height: 1.3; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+    h2 { font-size: 17px; margin: 28px 0 10px; color: var(--accent); }
+    h3 { font-size: 15px; margin: 18px 0 8px; }
+    p, li { margin: 0 0 10px; }
+    ul, ol { padding-left: 20px; margin: 0 0 12px; }
+    .card { background: var(--card); border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+    strong { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>关于新绿 · 养成指南</h1>
+  <p class="meta"> 版本 1.0 · 纯本地运行</p>
+
+  <p>
+    《新绿》是一款轻量绿植养成应用。在四季轮转与天气变化中照料你的小绿植：
+    播种、浇水、除虫、应对雨雪与干旱，陪伴它从萌芽到繁茂。本指南介绍核心规则与操作。
+  </p>
+
+  <h2>一、开始养成</h2>
+  <ul>
+    <li>首次进入或绿植消亡后，点击首页<strong>「播下种子」</strong>或<strong>「重新播种」</strong>开始新的旅程。</li>
+    <li>游戏使用<strong>虚拟时间</strong>推进四季与天气；顶部显示当前游戏日与陪伴天数。</li>
+    <li>所有进度保存在设备本地，无需联网即可游玩（内购与恢复购买需短暂联网）。</li>
+  </ul>
+
+  <h2>二、生长阶段</h2>
+  <p>健康阶段随四季推进：</p>
+  <ol>
+    <li><strong>种子阶段</strong> → <strong>春芽期</strong> → <strong>盛夏期</strong> → <strong>落叶期</strong> → <strong>冬眠期</strong>，随后进入新一轮春季。</li>
+  </ol>
+  <p>若长期忽视养护，可能进入负面状态：</p>
+  <ul>
+    <li><strong>缺水</strong>：超过约 2 个虚拟日未浇水（室外晴天会更快）。</li>
+    <li><strong>一级枯萎</strong>：缺水或虫害持续约 7 天未处理。</li>
+    <li><strong>二级枯萎</strong>：一级枯萎未救治，进入约 7 天消亡倒计时。</li>
+    <li><strong>完全消亡</strong>：倒计时结束且未解锁休眠特权时，进度永久丢失。</li>
+    <li><strong>休眠</strong>：已解锁休眠特权时，倒计时结束后进入休眠而非消亡，可用修复液唤醒。</li>
+  </ul>
+
+  <h2>三、天气与室内外</h2>
+  <div class="card">
+    <p><strong>室内</strong>：隔绝雨天、雪天的灾害暴露累计；不显示「搬入室内」提示。</p>
+    <p><strong>室外</strong>：同步虚拟天气特效；雨/雪天气下建议搬入室内。</p>
+  </div>
+  <ul>
+    <li><strong>晴天</strong>：室外有光合增益；室外缺水略快；无灾害伤害。</li>
+    <li><strong>阴天</strong>：无额外正负效果。</li>
+    <li><strong>雨天</strong>：自动补水；长期室外暴露计入 7 天灾害窗口；易生虫害。</li>
+    <li><strong>雪天</strong>：生长停滞；室外暴露计入灾害窗口。</li>
+  </ul>
+  <p>点击<strong>「搬入室内」</strong>或<strong>「搬出室外」</strong>可随时切换，场景与状态即时刷新。</p>
+
+  <h2>四、核心养护操作</h2>
+  <h3>浇水</h3>
+  <p>补充水分，缓解缺水与一级枯萎。雨天在室外浇水收益减半。</p>
+  <h3>除虫（两种方式）</h3>
+  <ul>
+    <li><strong>除虫液</strong>：背包或首页快捷使用，瞬间清除虫害。</li>
+    <li><strong>免费除虫小游戏</strong>：系统给出目标数（1–99）与 4 个数字（1–9），依次选择运算符（+ − × ÷）与数字，四个数各用一次拼出目标值即通关；除虫后自动清除虫害。</li>
+  </ul>
+  <h3>恢复绿植</h3>
+  <p>一级/二级枯萎或休眠时，首页会出现<strong>「恢复绿植」</strong>入口。持有修复液时可直接使用，恢复至当前季节的健康阶段。</p>
+
+  <h2>五、道具说明</h2>
+  <ul>
+    <li><strong>营养液</strong>：生效 7 个虚拟日，期间保持健康、不缺水、不生虫、不枯萎；多瓶可叠加时长。</li>
+    <li><strong>修复液</strong>：清除枯萎、休眠等负面状态，恢复至当前季节旺盛健康阶段；<strong>无法</strong>复活已完全消亡的绿植。</li>
+    <li><strong>除虫液</strong>：瞬间清除全部虫害及相关负面效果。</li>
+  </ul>
+  <p>在首页点击<strong>「背包」</strong>查看数量，选中道具后确认使用。</p>
+
+  <h2>六、每日签到</h2>
+  <p>首页点击<strong>「签到」</strong>，按设备<strong>自然日</strong>计算（与游戏虚拟时间无关），每日限领一次。随机获得营养液、除虫液或修复液，自动存入背包。断签不重置历史记录。</p>
+
+  <h2>七、休眠特权（可选内购）</h2>
+  <div class="card">
+    <p>一次性非消耗型内购，永久防止绿植<strong>彻底消亡</strong>。二级枯萎倒计时结束后进入休眠而非永久丢失；仍需修复液唤醒。</p>
+    <p>在<strong>设置</strong>页购买或恢复购买。已消亡的绿植无法回溯；特权仅保护后续养成进度。</p>
+  </div>
+  <p><strong>非必要不氪金！</strong>合理浇水、除虫与签到即可长期陪伴绿植。</p>
+
+  <p class="meta">愿您与绿植共度四季。</p>
+</body>
+</html>
