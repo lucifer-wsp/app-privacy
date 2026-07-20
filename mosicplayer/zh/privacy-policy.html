@@ -9,7 +9,8 @@
     @media (prefers-color-scheme: dark) {
       :root { --text: #f2f2f7; --muted: #aeaeb2; --accent: #8ec5ff; --bg: #000000; --card: #1c1c1e; }
     }
-    body { margin: 0; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); max-width: 720px; }
+    html { background: var(--bg); }
+    body { margin: 0 auto; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); max-width: 720px; box-sizing: border-box; }
     h1 { font-size: 22px; margin: 0 0 8px; line-height: 1.3; }
     .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
     h2 { font-size: 17px; margin: 28px 0 10px; color: var(--accent); }
@@ -22,7 +23,10 @@
 </head>
 <body>
   <h1>魔音播放器隐私政策</h1>
-  <p class="meta">生效日期：2026 年 7 月 16 日 · 版本 1.9</p>
+  <p class="meta">
+    最后更新：2026 年 7 月 20 日 · 应用版本 1.9.1<br>
+    开发者：wusp · 联系邮箱：<a href="mailto:su.destinylens@gmail.com">su.destinylens@gmail.com</a>
+  </p>
 
   <p>
     欢迎使用<strong>魔音播放器</strong>（Mosic Player，以下简称「本应用」）。我们重视您的隐私。
@@ -31,7 +35,7 @@
   </p>
   <div class="card">
     <p>
-      <strong>隐私承诺：</strong>本应用<strong>不收集、不上报、不上传</strong>您的个人数据与隐私信息；
+      <strong>隐私承诺：</strong>本应用<strong>不收集、不上报、不上传</strong>您的个人数据与隐私信息至我们的服务器或第三方；
       曲库、播放记录、偏好等<strong>全部仅保存在您的设备本地</strong>，我们没有自有服务器接收此类数据。
       您可随时在应用内删除相关内容，或通过卸载应用清除全部本地数据。
     </p>
@@ -39,15 +43,22 @@
       <strong>离线可用：</strong>曲库管理、播放、我的最爱、歌词与听歌统计等核心功能在<strong>无网络环境下均可正常使用</strong>，日常使用无需联网。
       仅当您主动打开隐私政策页面、前往 App Store 更新或评分等可选链接时，才需要网络连接。
     </p>
+    <p>
+      <strong>不共享数据：</strong>本应用<strong>不会</strong>将您的数据共享给广告商、分析平台或其他第三方服务。
+    </p>
   </div>
 
-  <h2>一、我们收集的信息</h2>
+  <h2>一、数据收集说明</h2>
   <p>
     本应用<strong>不收集</strong>可识别您个人身份的信息（如姓名、电子邮箱、手机号、精确地理位置、通讯录等），
     <strong>不会</strong>将任何用户数据或隐私信息上传至我们或第三方服务器，
     也<strong>不接入</strong>第三方广告或行为分析 SDK。
   </p>
-  <p>为提供播放与曲库功能，以下数据<strong>仅</strong>保存在您的<strong>设备本地</strong>（不会离开本机）：</p>
+  <p>
+    我们尤其<strong>不会</strong>传输设备标识符、位置信息或面向云端的使用分析数据。
+    播放记录与听歌统计仅作为<strong>设备本地数据</strong>，用于应用内「概览」展示，不会发送给我们。
+  </p>
+  <p>为提供播放与曲库功能，以下数据<strong>仅</strong>保存在您的<strong>设备本地</strong>（不会通过本应用离开本机）：</p>
   <ul>
     <li><strong>音乐库数据</strong>：您导入的音频文件（复制到应用沙盒）、合集信息、歌曲标题/艺人（如文件元数据可用）、歌词、我的最爱、排序偏好等；</li>
     <li><strong>自定义封面</strong>：您可选地从相册选择的合集封面图（本地处理后存储）；</li>
@@ -58,23 +69,29 @@
   <h2>二、信息的使用方式</h2>
   <ul>
     <li>导入、整理并播放您的本地音频与歌词文件；</li>
-    <li>展示合集、我的最爱、播放器、迷你播放器与个人统计；</li>
+    <li>展示合集、我的最爱、播放器、迷你播放器与个人听歌概览；</li>
     <li>在会话之间记住播放进度与偏好；</li>
-    <li>支持您从相册选择自定义合集封面。</li>
+    <li>支持您从相册选择自定义合集封面；</li>
+    <li>在您播放音乐时，于 iOS 系统控件（控制中心 / 锁屏）展示正在播放信息。</li>
   </ul>
-  <p>上述用途均在<strong>设备本地完成</strong>。我们<strong>不会</strong>将这些数据用于广告、用户画像，也不会出售或分享给第三方。</p>
+  <p>上述用途均在<strong>设备本地</strong>（或经由 Apple 系统界面）完成。我们<strong>不会</strong>将这些数据用于广告、用户画像，也不会出售或分享给第三方。</p>
 
   <h2>三、信息的存储与安全</h2>
   <div class="card">
     <p>上述数据<strong>全部</strong>存储在您设备的应用沙盒与系统偏好中，<strong>不会上传、不会同步至云端或我们运营的任何服务器</strong>。</p>
+    <p>
+      已导入的音频存放于本应用 Documents 目录。因本应用开启了 iOS 文件共享（File Sharing），您也可在系统「文件」App / Finder（设备连接电脑时）浏览这些文件——仍仅限于您可控的设备，不会经我们的服务器传输。
+    </p>
     <p>您可随时删除本地数据；卸载本应用通常会清除应用沙盒内的全部内容。若您依赖已导入的音乐，请自行保留原始文件备份。</p>
   </div>
 
   <h2>四、权限说明</h2>
+  <p>本应用仅在必要时请求设备能力，相关访问仅用于本地功能，不会用于上传您的内容：</p>
   <ul>
-    <li><strong>文件 / 文档选择器</strong>：仅在您选择导入音频文件或文件夹时使用，访问范围限于您主动选择的内容；</li>
+    <li><strong>文件 / 文档选择器</strong>：仅在您选择导入音频文件或文件夹时使用，访问范围限于您主动选择的内容。所选音频会复制到应用沙盒以供播放，我们不会上传原始文件；</li>
     <li><strong>相册</strong>：仅在您选择自定义合集封面时请求；图片在本地处理，我们不会上传；</li>
-    <li><strong>后台音频</strong>：用于在应用切到后台或锁屏时继续播放。</li>
+    <li><strong>后台音频</strong>：用于在应用切到后台或锁屏时继续播放；</li>
+    <li><strong>网络（可选）</strong>：仅当您主动打开本隐私政策、App Store 产品页、评价页或类似链接时使用。核心播放无需联网。</li>
   </ul>
   <p>核心功能不请求相机、麦克风、通讯录或精确位置权限。</p>
 
@@ -91,7 +108,10 @@
   </p>
 
   <h2>七、您的权利与控制</h2>
-  <p>您对本地数据拥有完全控制权，可随时删除：</p>
+  <p>
+    由于我们不在自有服务器上收集个人数据，通常不存在需由我们代为访问、更正或删除的云端副本。
+    您对设备上的本地数据拥有完全控制权：
+  </p>
   <ul>
     <li>可在应用内随时删除已导入歌曲、合集、自定义封面，并清空本地播放统计；</li>
     <li>可在 iOS 设置中关闭相册访问权限；</li>
@@ -101,9 +121,13 @@
 
   <h2>八、政策更新</h2>
   <p>
-    我们可能不时更新本政策。最新版本可在应用「个人中心 → 隐私政策」及本页面查看。
-    如有重大变更，我们将更新上方生效日期。
+    我们可能不时更新本政策。最新版本可在应用<strong>「概览 → 隐私政策」</strong>及本页面查看。
   </p>
+  <p>若未来版本引入会离开设备的数据收集，我们将：</p>
+  <ul>
+    <li>更新本政策并突出说明变更，同时更新上方「最后更新」日期；</li>
+    <li>酌情通过应用内提示和/或 App Store 版本说明告知用户。</li>
+  </ul>
 
   <h2>九、联系我们</h2>
   <p>如对本政策或隐私实践有疑问，请联系：</p>

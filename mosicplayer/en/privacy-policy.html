@@ -9,7 +9,8 @@
     @media (prefers-color-scheme: dark) {
       :root { --text: #f2f2f7; --muted: #aeaeb2; --accent: #8ec5ff; --bg: #000000; --card: #1c1c1e; }
     }
-    body { margin: 0; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); max-width: 720px; }
+    html { background: var(--bg); }
+    body { margin: 0 auto; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); max-width: 720px; box-sizing: border-box; }
     h1 { font-size: 22px; margin: 0 0 8px; line-height: 1.3; }
     .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
     h2 { font-size: 17px; margin: 28px 0 10px; color: var(--accent); }
@@ -22,7 +23,10 @@
 </head>
 <body>
   <h1>Mosic Player Privacy Policy</h1>
-  <p class="meta">Effective date: July 16, 2026 · Version 1.9</p>
+  <p class="meta">
+    Last Updated: July 20, 2026 · App Version 1.9.1<br>
+    Developer: wusp · Contact: <a href="mailto:su.destinylens@gmail.com">su.destinylens@gmail.com</a>
+  </p>
 
   <p>
     Welcome to <strong>Mosic Player</strong> (the “App”). We respect your privacy.
@@ -31,7 +35,7 @@
   </p>
   <div class="card">
     <p>
-      <strong>Privacy commitment:</strong> The App does <strong>not collect, report, or upload</strong> your personal data or private information.
+      <strong>Privacy commitment:</strong> The App does <strong>not collect, report, or upload</strong> your personal data or private information to our servers or third parties.
       Your music library, playback history, and preferences stay <strong>entirely on your device</strong>; we do not operate servers that receive this data.
       You can delete this content anytime in the App, or remove all local App data by uninstalling.
     </p>
@@ -40,16 +44,23 @@
       <strong>fully without an internet connection</strong>. A network is not required for normal daily use.
       Optional links (such as this privacy policy page, App Store updates, or ratings) need a connection only when you choose to open them.
     </p>
+    <p>
+      <strong>No data sharing:</strong> The App does <strong>not</strong> share your data with advertisers, analytics platforms, or other third-party services.
+    </p>
   </div>
 
-  <h2>1. Information We Collect</h2>
+  <h2>1. Data Collection Statement</h2>
   <p>
     The App <strong>does not collect</strong> personally identifiable information
     (such as your name, email address, phone number, precise location, or contacts),
     does <strong>not upload</strong> any user data or private information to our or third-party servers,
     and <strong>does not integrate</strong> third-party advertising or analytics SDKs.
   </p>
-  <p>To provide core playback and library features, the following data is stored <strong>only locally on your device</strong> (it does not leave your device):</p>
+  <p>
+    In particular, we do <strong>not</strong> transmit device identifiers, location data, or cloud-bound usage analytics.
+    Playback history and listening statistics exist only as <strong>local data on your device</strong> to power in-App Insights—they are not sent to us.
+  </p>
+  <p>To provide core playback and library features, the following data is stored <strong>only locally on your device</strong> (it does not leave your device via the App):</p>
   <ul>
     <li><strong>Music library data</strong>: audio files you import (copied into the App sandbox), collection metadata, song titles/artists when available from file metadata, lyrics files, favorites, and sort preferences;</li>
     <li><strong>Custom cover images</strong>: photos you optionally choose from your photo library as collection covers (processed and stored locally);</li>
@@ -60,11 +71,12 @@
   <h2>2. How We Use Information</h2>
   <ul>
     <li>Import, organize, and play your local audio and lyric files;</li>
-    <li>Display collections, favorites, player UI, mini player, and personal statistics;</li>
+    <li>Display collections, favorites, player UI, mini player, and personal listening Insights;</li>
     <li>Remember playback progress and preferences between sessions;</li>
-    <li>Support optional custom collection covers selected from Photos.</li>
+    <li>Support optional custom collection covers selected from Photos;</li>
+    <li>Show Now Playing information in iOS system controls (Control Center / Lock Screen) while you play music.</li>
   </ul>
-  <p>All of the above happens <strong>on your device</strong>. We do <strong>not</strong> use this data for advertising, profiling, or sale or sharing with third parties.</p>
+  <p>All of the above happens <strong>on your device</strong> (or via Apple system UI). We do <strong>not</strong> use this data for advertising, profiling, or sale or sharing with third parties.</p>
 
   <h2>3. Storage and Security</h2>
   <div class="card">
@@ -73,16 +85,21 @@
       It is <strong>not uploaded, and not synced to the cloud or any servers we operate</strong>.
     </p>
     <p>
+      Imported audio lives under the App’s Documents area. With iOS File Sharing enabled for this App, you may also browse those files in the system Files app / Finder when your device is connected—still only on devices you control, not via our servers.
+    </p>
+    <p>
       You can delete local data at any time. Uninstalling the App typically removes everything in the App sandbox.
       If you rely on imported music, keep your own backups of original files.
     </p>
   </div>
 
   <h2>4. Permissions</h2>
+  <p>The App requests device capabilities only when needed. Access is used locally and is not used to upload your content:</p>
   <ul>
-    <li><strong>Files / Document Picker</strong>: used when you choose audio files or folders to import. Access is limited to items you select.</li>
+    <li><strong>Files / Document Picker</strong>: used when you choose audio files or folders to import. Access is limited to items you select. Selected audio is copied into the App sandbox for playback; originals are not uploaded by us.</li>
     <li><strong>Photo Library</strong>: requested only when you choose a custom collection cover. Images are processed locally and are not uploaded by us.</li>
     <li><strong>Background Audio</strong>: used so playback can continue while the App is in the background or the screen is locked.</li>
+    <li><strong>Network (optional)</strong>: used only when you open this privacy policy, the App Store product page, write-review page, or similar links you choose. Core playback does not require network access.</li>
   </ul>
   <p>The App does not request camera, microphone, contacts, or precise location permissions for its core features.</p>
 
@@ -100,7 +117,10 @@
   </p>
 
   <h2>7. Your Rights and Controls</h2>
-  <p>You have full control over local data and can delete it at any time:</p>
+  <p>
+    Because we do not collect personal data on our servers, there is typically no cloud copy for us to access, correct, or delete on your behalf.
+    You retain full control of local data on your device:
+  </p>
   <ul>
     <li>You can delete imported songs, collections, and custom covers, and clear local playback statistics inside the App at any time;</li>
     <li>You can revoke Photo Library access in iOS Settings;</li>
@@ -110,12 +130,19 @@
 
   <h2>8. Policy Updates</h2>
   <p>
-    We may update this policy from time to time. The latest version is available in the App under Profile → Privacy Policy,
-    and at this page. For material changes, we will update the effective date above.
+    We may update this policy from time to time. The latest version is available in the App under
+    <strong>Insights → Privacy Policy</strong>, and at this page.
   </p>
+  <p>
+    If a future version of Mosic Player introduces data collection that leaves your device, we will:
+  </p>
+  <ul>
+    <li>Update this policy with clear change highlights and a new “Last Updated” date;</li>
+    <li>Notify users via in-App notice and/or App Store release notes where appropriate.</li>
+  </ul>
 
   <h2>9. Contact Us</h2>
-  <p>If you have questions about this policy or our privacy practices, please contact us:</p>
+  <p>For privacy-related inquiries, contact us at:</p>
   <div class="card">
     <p>Email: <a href="mailto:su.destinylens@gmail.com">su.destinylens@gmail.com</a></p>
   </div>

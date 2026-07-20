@@ -9,7 +9,8 @@
     @media (prefers-color-scheme: dark) {
       :root { --text: #f2f2f7; --muted: #aeaeb2; --accent: #8ec5ff; --bg: #000000; --card: #1c1c1e; }
     }
-    body { margin: 0; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); max-width: 720px; }
+    html { background: var(--bg); }
+    body { margin: 0 auto; padding: 20px 18px 40px; font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Helvetica Neue", sans-serif; font-size: 15px; line-height: 1.65; color: var(--text); background: var(--bg); max-width: 720px; box-sizing: border-box; }
     h1 { font-size: 22px; margin: 0 0 8px; line-height: 1.3; }
     .meta { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
     h2 { font-size: 17px; margin: 28px 0 10px; color: var(--accent); }
@@ -22,7 +23,10 @@
 </head>
 <body>
   <h1>魔音播放器隱私政策</h1>
-  <p class="meta">生效日期：2026 年 7 月 16 日 · 版本 1.9</p>
+  <p class="meta">
+    最後更新：2026 年 7 月 20 日 · 應用版本 1.9.1<br>
+    開發者：wusp · 聯絡信箱：<a href="mailto:su.destinylens@gmail.com">su.destinylens@gmail.com</a>
+  </p>
 
   <p>
     歡迎使用<strong>魔音播放器</strong>（Mosic Player，以下簡稱「本應用」）。我們重視您的隱私。
@@ -31,7 +35,7 @@
   </p>
   <div class="card">
     <p>
-      <strong>隱私承諾：</strong>本應用<strong>不收集、不上報、不上傳</strong>您的個人資料與隱私資訊；
+      <strong>隱私承諾：</strong>本應用<strong>不收集、不上報、不上傳</strong>您的個人資料與隱私資訊至我們的伺服器或第三方；
       曲庫、播放紀錄、偏好等<strong>全部僅保存在您的裝置本機</strong>，我們沒有自有伺服器接收此類資料。
       您可隨時在應用內刪除相關內容，或透過解除安裝應用清除全部本機資料。
     </p>
@@ -39,15 +43,22 @@
       <strong>離線可用：</strong>曲庫管理、播放、我的最愛、歌詞與聽歌統計等核心功能在<strong>無網路環境下均可正常使用</strong>，日常使用無需連網。
       僅當您主動開啟隱私政策頁面、前往 App Store 更新或評分等可選連結時，才需要網路連線。
     </p>
+    <p>
+      <strong>不共享資料：</strong>本應用<strong>不會</strong>將您的資料共享給廣告商、分析平台或其他第三方服務。
+    </p>
   </div>
 
-  <h2>一、我們收集的資訊</h2>
+  <h2>一、資料收集說明</h2>
   <p>
     本應用<strong>不收集</strong>可識別您個人身分的資訊（如姓名、電子郵件、手機號碼、精確地理位置、通訊錄等），
     <strong>不會</strong>將任何使用者資料或隱私資訊上傳至我們或第三方伺服器，
     也<strong>不接入</strong>第三方廣告或行為分析 SDK。
   </p>
-  <p>為提供播放與曲庫功能，以下資料<strong>僅</strong>保存在您的<strong>裝置本機</strong>（不會離開本機）：</p>
+  <p>
+    我們尤其<strong>不會</strong>傳輸裝置識別碼、位置資訊或面向雲端的使用分析資料。
+    播放紀錄與聽歌統計僅作為<strong>裝置本機資料</strong>，用於應用內「概覽」展示，不會傳送給我們。
+  </p>
+  <p>為提供播放與曲庫功能，以下資料<strong>僅</strong>保存在您的<strong>裝置本機</strong>（不會透過本應用離開本機）：</p>
   <ul>
     <li><strong>音樂庫資料</strong>：您匯入的音訊檔案（複製到應用沙盒）、合集資訊、歌曲標題/藝人（如檔案中繼資料可用）、歌詞、我的最愛、排序偏好等；</li>
     <li><strong>自訂封面</strong>：您可選擇從相簿選取的合集封面圖（本機處理後儲存）；</li>
@@ -58,23 +69,29 @@
   <h2>二、資訊的使用方式</h2>
   <ul>
     <li>匯入、整理並播放您的本機音訊與歌詞檔案；</li>
-    <li>展示合集、我的最愛、播放器、迷你播放器與個人統計；</li>
+    <li>展示合集、我的最愛、播放器、迷你播放器與個人聽歌概覽；</li>
     <li>在工作階段之間記住播放進度與偏好；</li>
-    <li>支援您從相簿選擇自訂合集封面。</li>
+    <li>支援您從相簿選擇自訂合集封面；</li>
+    <li>在您播放音樂時，於 iOS 系統控件（控制中心 / 鎖定螢幕）展示正在播放資訊。</li>
   </ul>
-  <p>上述用途均在<strong>裝置本機完成</strong>。我們<strong>不會</strong>將這些資料用於廣告、使用者畫像，也不會出售或分享給第三方。</p>
+  <p>上述用途均在<strong>裝置本機</strong>（或經由 Apple 系統介面）完成。我們<strong>不會</strong>將這些資料用於廣告、使用者畫像，也不會出售或分享給第三方。</p>
 
   <h2>三、資訊的儲存與安全</h2>
   <div class="card">
     <p>上述資料<strong>全部</strong>儲存在您裝置的應用沙盒與系統偏好中，<strong>不會上傳、不會同步至雲端或我們營運的任何伺服器</strong>。</p>
+    <p>
+      已匯入的音訊存放於本應用 Documents 目錄。因本應用開啟了 iOS 檔案共享（File Sharing），您也可在系統「檔案」App / Finder（裝置連接電腦時）瀏覽這些檔案——仍僅限於您可控的裝置，不會經我們的伺服器傳輸。
+    </p>
     <p>您可隨時刪除本機資料；解除安裝本應用通常會清除應用沙盒內的全部內容。若您依賴已匯入的音樂，請自行保留原始檔案備份。</p>
   </div>
 
   <h2>四、權限說明</h2>
+  <p>本應用僅在必要時請求裝置能力，相關存取僅用於本機功能，不會用於上傳您的內容：</p>
   <ul>
-    <li><strong>檔案 / 文件選擇器</strong>：僅在您選擇匯入音訊檔案或資料夾時使用，存取範圍限於您主動選擇的內容；</li>
+    <li><strong>檔案 / 文件選擇器</strong>：僅在您選擇匯入音訊檔案或資料夾時使用，存取範圍限於您主動選擇的內容。所選音訊會複製到應用沙盒以供播放，我們不會上傳原始檔案；</li>
     <li><strong>相簿</strong>：僅在您選擇自訂合集封面時請求；圖片在本機處理，我們不會上傳；</li>
-    <li><strong>背景音訊</strong>：用於在應用切換至背景或鎖定螢幕時繼續播放。</li>
+    <li><strong>背景音訊</strong>：用於在應用切換至背景或鎖定螢幕時繼續播放；</li>
+    <li><strong>網路（可選）</strong>：僅當您主動開啟本隱私政策、App Store 產品頁、評價頁或類似連結時使用。核心播放無需連網。</li>
   </ul>
   <p>核心功能不請求相機、麥克風、通訊錄或精確位置權限。</p>
 
@@ -91,7 +108,10 @@
   </p>
 
   <h2>七、您的權利與控制</h2>
-  <p>您對本機資料擁有完全控制權，可隨時刪除：</p>
+  <p>
+    由於我們不在自有伺服器上收集個人資料，通常不存在需由我們代為存取、更正或刪除的雲端副本。
+    您對裝置上的本機資料擁有完全控制權：
+  </p>
   <ul>
     <li>可在應用內隨時刪除已匯入歌曲、合集、自訂封面，並清空本機播放統計；</li>
     <li>可在 iOS 設定中關閉相簿存取權限；</li>
@@ -101,9 +121,13 @@
 
   <h2>八、政策更新</h2>
   <p>
-    我們可能不時更新本政策。最新版本可在應用「個人中心 → 隱私政策」及本頁面查看。
-    如有重大變更，我們將更新上方生效日期。
+    我們可能不時更新本政策。最新版本可在應用<strong>「概覽 → 隱私政策」</strong>及本頁面查看。
   </p>
+  <p>若未來版本引入會離開裝置的資料收集，我們將：</p>
+  <ul>
+    <li>更新本政策並突出說明變更，同時更新上方「最後更新」日期；</li>
+    <li>酌情透過應用內提示和/或 App Store 版本說明告知使用者。</li>
+  </ul>
 
   <h2>九、聯絡我們</h2>
   <p>如對本政策或隱私實務有疑問，請聯絡：</p>
